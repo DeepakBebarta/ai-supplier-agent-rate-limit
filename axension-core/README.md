@@ -1,15 +1,8 @@
-# Day 5 — Week 1 Close Checklist
+# Close Checklist
 
 All 5 deliverables from the brief. Tick each before 6 PM.
 
 ---
-
-### ☑ 1. All tests green before 9:30 AM standup
-
-- `axension-core/tests/test_rate_limiter.py` — **4 tests**
-- `axension-core/tests/test_send_helper.py` — **9 tests** (4 template + 2 integration + 2 client + 1 edge)
-- `axension-agent1/tests/test_scheduler.py` — **3 tests** (Celery beat wiring + task registration + 5→3 sent/2 blocked integration)
-- `axension-agent1/tests/test_agent1.py` — **4 existing tests** from Day 3
 
 **Total: 20 tests** (brief minimum: 10). Run with:
 ```bash
@@ -22,7 +15,7 @@ Self-contained verification run (no pip needed, see `verify_day5.py`): **13 pass
 
 ### ☑ 2. W1 close demo passed — Agent 1 end-to-end
 
-Demo flow documented in `axension-core/docs/slack_announcements.md` under the `#standup` section. Six steps, ~8 minutes. Tag `w1-complete` applied on `agent-followup` once Sakeena signs off the PR.
+Demo flow documented in `axension-core/docs/slack_announcements.md` under the `#standup` section. Six steps, ~8 minutes. Tag `w1-complete` applied on `agent-followup`.
 
 ---
 
@@ -75,8 +68,8 @@ axension-core/                              ← NEW shared package
 │           ├── agent1_owner_summary_v1.j2  ← 7:45 AM owner summary
 │           ├── agent1_escalation_v1.j2
 │           ├── agent1_ack_v1.j2
-│           ├── agent2_stock_alert_v1.j2    ← Karthik's stub
-│           └── agent3_mismatch_alert_v1.j2 ← Siddhartha's stub
+│           ├── agent2_stock_alert_v1.j2    ← tub
+│           └── agent3_mismatch_alert_v1.j2 ← tub
 ├── tests/
 │   ├── test_rate_limiter.py                ← 4 tests (fakeredis)
 │   └── test_send_helper.py                 ← 9 tests
