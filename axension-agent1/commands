@@ -1,0 +1,23 @@
+pip install -r requirements.txt
+pip install celery[redis]==5.4.0 redis==5.2.1 "psycopg[binary]==3.3.3" twilio==9.4.0 python-dotenv==1.1.0 pytest==8.3.4 pytest-mock==3.14.0
+python -c "import celery; import psycopg; import twilio; print('All packages OK')"
+out put All packages OK
+ copy .env.example .env
+
+python -c "import psycopg; psycopg.connect('postgresql://postgres.zwgoujseohygllrsmokk:Axension2026db@aws-1-ap-south-1.pooler.supabase.com:6543/postgres'); print('Connected!')"
+ python -m scripts.test_scanner
+
+ 
+
+
+ optimised   :
+
+ pip install flask pyngrok
+ kill that : taskkill /F /IM ngrok.exe
+ python -m src.whatsapp.webhook
+Webhook URL  will arise in  terminal
+copy and paste Webhook URL in  https://console.twilio.com/us1/develop/sms/try-it-out/whatsapp-learn in sandbox settings 
+
+paste in this When a message comes in  with post as method
+final test :
+pytest tests/test_agent1.py -v

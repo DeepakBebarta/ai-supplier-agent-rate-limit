@@ -1,0 +1,11 @@
+Hello {{ supplier_name }},
+
+This is a follow-up regarding PO #{{ po_number }} for {{ item_name }}.
+Delivery was expected on {{ promised_date }} ({{ days_overdue }} day{{ "s" if days_overdue != 1 else "" }} ago).
+
+Please confirm dispatch status. Reply:
+• *dispatched* — goods are shipped
+• *delay [N]*  — N more days needed
+• *eta [date]* — new delivery date
+
+— Axension AI

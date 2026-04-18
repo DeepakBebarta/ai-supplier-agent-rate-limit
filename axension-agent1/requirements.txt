@@ -1,0 +1,13 @@
+celery[redis]==5.4.0
+redis==5.2.1
+psycopg[binary]==3.3.3
+python-dotenv==1.1.0
+pytest==8.3.4
+pytest-mock==3.14.0
+fakeredis==2.26.1
+flask==3.1.0
+requests==2.32.3
+Jinja2==3.1.4
+
+# Shared core package — install from local path
+# pip install -e ../axension-core

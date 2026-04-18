@@ -1,0 +1,34 @@
+cd axension-agent1
+pip install -e ../axension-core
+pip install -r requirements.txt
+
+python -c "import celery; import psycopg; import redis; import flask; import jinja2; print('All packages OK')"
+cp .env.example .env 
+python -c "import psycopg; psycopg.connect('postgresql://postgres.zwgoujseohygllrsmokk:Axension2026db@aws-1-ap-south-1.pooler.supabase.com:6543/postgres'); print('Connected!')"
+docker exec -it redis redis-cli ping
+
+ python -m scripts.test_scanner
+
+ cd "D:\axension-week2 5"
+>> python -m pytest axension-core/tests -v
+>> cd axension-agent1
+>> python -m pytest tests -v --import-mode=importlib
+
+ cd "D:\axension-week2 5\axension-agent1"
+>> python -m src.whatsapp.webhook
+
+
+
+optimised:
+
+cd "D:\axension-week2 5\axension-agent1"
+>> python -m celery -A src.tasks.celery_app worker --loglevel=info --pool=solo
+
+cd "D:\axension-week2 5"
+python -m pytest axension-core/tests -v
+cd axension-agent1
+python -m pytest tests -v --import-mode=importlib
+
+cloudflared tunnel --url http://localhost:5000
+Invoke-WebRequest "https://prophet-eagles-seek-start.trycloudflare.com/webhook?hub.mode=subscribe&hub.verify_token=axension_verify&hub.challenge=testchallenge" -UseBasicParsing
+python -c "from dotenv import load_dotenv; load_dotenv(); from axension_core.messaging import reset_factory_today; reset_factory_today('factory_001'); print('Reset done')"

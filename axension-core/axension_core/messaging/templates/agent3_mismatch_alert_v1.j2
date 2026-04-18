@@ -1,0 +1,18 @@
+⚠️ *Invoice Mismatch — PO #{{ po_number }}*
+
+Invoice {{ invoice_number }} from {{ supplier_name }} does not match the PO.
+
+PO total:      ₹{{ po_amount }}
+Invoice total: ₹{{ invoice_amount }}
+Variance:      ₹{{ variance }} ({{ variance_pct }}%)
+{% if line_items_diff %}
+
+Line-item differences:
+{% for diff in line_items_diff %}
+   • {{ diff.item }}: PO {{ diff.po_qty }} → Inv {{ diff.inv_qty }}
+{% endfor %}
+{% endif %}
+
+Please review before approving payment.
+
+— Axension AI · Agent 3

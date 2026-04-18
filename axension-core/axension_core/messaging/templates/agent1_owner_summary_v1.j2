@@ -1,0 +1,20 @@
+🌅 *Good morning. Axension AI — {{ date_str }}*
+
+Yesterday's supplier follow-ups: *{{ followed_up }}*
+{% if followed_up > 0 %}
+   ✅ Replied: {{ replied }}
+   ⏳ No reply: {{ no_reply }}
+{% endif %}
+{% if escalations and escalations|length > 0 %}
+
+🚨 *Escalations (5+ days overdue):*
+{% for e in escalations %}
+   • {{ e.supplier_name }} — PO #{{ e.po_number }} ({{ e.days_overdue }}d)
+{% endfor %}
+{% endif %}
+{% if stock_summary %}
+
+📦 Stock alerts today: *{{ stock_summary.critical }} critical*, {{ stock_summary.warning }} warning
+{% endif %}
+
+Reply *9* for full PO report.

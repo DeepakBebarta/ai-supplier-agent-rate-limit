@@ -1,0 +1,15 @@
+📦 *Stock Alert — {{ severity|upper }}*
+
+{{ item_name }} is at {{ current_qty }} {{ unit }}.
+{% if severity == "critical" %}
+This is below the critical threshold of {{ critical_threshold }} {{ unit }}.
+*Immediate reorder required.*
+{% else %}
+Below the warning threshold of {{ warning_threshold }} {{ unit }}.
+Suggest raising a PO this week.
+{% endif %}
+
+Last consumed: {{ last_consumed_date }}
+Avg daily use: {{ avg_daily }} {{ unit }}
+
+— Axension AI · Agent 2
