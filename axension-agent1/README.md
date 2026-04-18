@@ -1,6 +1,6 @@
-# Axension AI — Agent 1: WhatsApp Supplier Follow-Up
+# WhatsApp Supplier Follow-Up
 
-**Transport: Meta WhatsApp Cloud API (WABA) — Twilio removed.**
+**Transport: Meta WhatsApp Cloud API .**
 
 ---
 
