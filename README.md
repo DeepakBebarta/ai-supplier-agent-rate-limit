@@ -1,7 +1,7 @@
-# Axension AI — Week 1 Close (Day 5)
-### Agent 1: WhatsApp Supplier Follow-Up — D2 Deepak
 
-**Transport: Meta WhatsApp Cloud API (WABA) — Twilio removed in W2.**
+### Agent 1: WhatsApp Supplier Follow-Up 
+
+**Transport: Meta WhatsApp Cloud API **
 
 ---
 
@@ -61,7 +61,7 @@ Demonstrated live:
 
 - `axension-core/axension_core/messaging/templates/agent1_owner_summary_v1.j2`
 - 3 scenarios rendered (quiet / busy / bad morning) — posted in `#tl-template-review`
-- Not wired into scheduler yet — Day 6 task
+- Not wired into scheduler yet 
 
 ---
 
@@ -82,8 +82,8 @@ axension-week2/
 │   │           ├── agent1_owner_summary_v1.j2
 │   │           ├── agent1_escalation_v1.j2
 │   │           ├── agent1_ack_v1.j2
-│   │           ├── agent2_stock_alert_v1.j2    ← Karthik's stub
-│   │           └── agent3_mismatch_alert_v1.j2 ← Siddhartha's stub
+│   │           ├── agent2_stock_alert_v1.j2    ← ub
+│   │           └── agent3_mismatch_alert_v1.j2 ← ub
 │   ├── tests/
 │   │   ├── test_rate_limiter.py            ← 4 tests (fakeredis)
 │   │   └── test_send_helper.py             ← 9 tests
@@ -380,4 +380,3 @@ W2 (Day 6) flips `DRY_RUN=false` on a real factory owner's phone. Two things pre
 
 ---
 
-*Axension AI · MVP Sprint · Day 5 — Week 1 Close · D2 — Deepak · Confidential*
